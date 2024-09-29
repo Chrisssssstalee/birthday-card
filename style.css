@@ -1,0 +1,128 @@
+body {
+    font-family: 'Kanit', cursive;
+    background-color: #2E2E2E; /* Dark Gray for background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  #button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  #play-button {
+    position: relative;
+    z-index: 10;
+  }
+  
+  #card-content {
+    display: none;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  #card-content.show {
+    opacity: 1;
+  }
+  
+  .card {
+    background-color: #2C3E50; /* Muted Navy for the card */
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    width: 400px; /* Wider card */
+  }
+  
+  .title {
+    font-size: 2em;
+    color: #B22222; /* Muted Dark Red for the title */
+  }
+  
+  .message {
+    font-size: 1.2em;
+    margin-top: 10px;
+    color: #FFFFFF; /* White text for message */
+  }
+  
+  .footer {
+    font-size: 1em;
+    margin-top: 20px;
+    color: #B22222; /* Muted Dark Red for footer */
+  }
+  
+  .balloons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  
+  .balloon {
+    width: 30px;
+    height: auto;
+    animation: float 4s ease-in-out infinite;
+  }
+  
+  .balloon:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+  }
+  
+  .title:hover {
+    color: #FF6347; /* Tomato Red on hover */
+    transition: color 0.3s ease;
+  }
+  
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+  
+  .confetti {
+    width: 10px;
+    height: 10px;
+    background: #B22222; /* Muted Dark Red for confetti */
+    position: fixed;
+    top: -10px;
+    animation: fall 5s ease-in-out infinite;
+    z-index: 1000;
+  }
+  
+  @keyframes fall {
+    0% { transform: translateY(-100vh); }
+    100% { transform: translateY(100vh); }
+  }
+  
+  .play-btn {
+    background-color: #8B0000; /* Muted Dark Red for button */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .play-btn:hover {
+    background-color: #FF6347; /* Tomato Red on hover */
+    transition: background-color 0.3s ease;
+  }
+  
